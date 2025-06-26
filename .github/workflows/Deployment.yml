@@ -16,7 +16,7 @@ jobs:
       - name: Setup SSH
         run: |
           mkdir -p ~/.ssh
-          echo "${{ secrets.DO_SSH_KEY }}" > ~/.ssh/id_ed25519
+          echo "${{ secrets.AI_CHEF_SSH_KEY }}" > ~/.ssh/id_ed25519
           chmod 700 ~/.ssh/id_ed25519
           ssh-keyscan -H ${{ secrets.AI_CHEF_HOST }} >> ~/.ssh/known_hosts
 
